@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode colors */
+  --background: 0 0% 100%;
+  --foreground: 215 35% 18%;
+
+  --card: 0 0% 98%;
+  --card-foreground: 215 35% 18%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 35% 18%;
+
+  /* Primary color - Seafoam green from the logo */
+  --primary: 174 17% 48%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary color - lighter version of primary */
+  --secondary: 174 17% 90%;
+  --secondary-foreground: 174 17% 20%;
+
+  --muted: 215 35% 93%;
+  --muted-foreground: 215 10% 40%;
+
+  /* Accent color - another variation of the seafoam */
+  --accent: 175 17% 48%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 35% 85%;
+  --input: 215 35% 85%;
+  --ring: 174 17% 48%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark mode colors - original Neptune palette */
+  --background: 215 35% 18%;
+  --foreground: 0 0% 100%;
+
+  --card: 215 35% 20%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 215 35% 18%;
+  --popover-foreground: 0 0% 100%;
+
+  /* Primary color - Seafoam green from the logo */
+  --primary: 174 17% 48%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary color - lighter version of primary */
+  --secondary: 174 17% 90%;
+  --secondary-foreground: 174 17% 20%;
+
+  --muted: 215 35% 25%;
+  --muted-foreground: 215 10% 75%;
+
+  /* Accent color - another variation of the seafoam */
+  --accent: 175 17% 48%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 35% 25%;
+  --input: 215 35% 25%;
+  --ring: 174 17% 48%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted/50 rounded-sm;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted;
+}
+
